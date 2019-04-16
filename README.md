@@ -16,8 +16,10 @@ position
 ## Reflection
 ## 1. Camera Calibration and image undistortion
 
-I coded this part in the jupyter notebook. The images for calibration were shot by the camera in different distence or angels of the same printed chessboard.  I counted the corners in the chessboard images. The the corners were detected in cv2.findChessboardCorners, and the coordinates of the corners were stored in a list. With the corresponding point coordinates in the object points which I listed and the corners' coordinates in images, the openCV calibrateCamera function implement the calibration. Then I get the mtx and dist array which were used to undistort images.
-![image](855388ACF529435AA0DC35CEAACF7270)
+I coded this part in the jupyter notebook. The images for calibration were shot by the camera in different distence or angels of the same printed chessboard. I counted the corners in the chessboard images. The the corners were detected in cv2.findChessboardCorners, and the coordinates of the corners were stored in a list. With the corresponding point coordinates in the object points which I listed and the corners' coordinates in images, the openCV calibrateCamera function implement the calibration. Then I get the mtx and dist array which were used to undistort images.
+
+<img src="output_images/calibration and undistort.png">
+
 The picture show the images before and after the undistortion, and the diference between them. I can see that the farther the pixel is away from the center, the worse the distortion.
 
 ## 2. Preprocessing
