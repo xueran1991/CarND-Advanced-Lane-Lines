@@ -50,6 +50,6 @@ The test result on videos were saved in the outputs video folder. It performed r
 ## 6. Discuss
 The pipline run through well on the test images and the project video. But it didn't performed properly on the two challenges videos.So the pipline were still not robust enough to satisfy all the scenarios. That's the major shortcommings of the pipline. Besides, it can also be imporved in time efficient.
 
-There are methods to tackle the problems. More accurate thresholds could be found if I implement the pipline through the tricky frames of the challenage video. 
+There are methods to tackle the problems. More accurate thresholds and binary combination could be found if I implement the pipline through the tricky frames of the challenage video. 
 
 
