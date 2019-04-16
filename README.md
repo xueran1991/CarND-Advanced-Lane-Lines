@@ -45,5 +45,11 @@ With the lane line functions, the radius of the lane line curvature could be cal
 I run my pipline on the test images firstly. The result looks good. Here is an example.
 <img src="output_images/7.jpg">
 
-The test result on videos were saved in the outputs video folder. It performed reasonably well on the entire project video. There is no catastrophic failures. And the radius of curvature of the lane and vehicle position within the lane were calculated.
+The test result on videos were saved in the outputs video folder. It performed reasonably well on the entire [project video](output_videos/project_video_out.mp4). There is no catastrophic failures. And the radius of curvature of the lane and vehicle position within the lane were calculated.
+
+## 6. Discuss
+The pipline run through well on the test images and the project video. But it didn't performed properly on the two challenges videos.So the pipline were still not robust enough to satisfy all the scenarios. That's the major shortcommings of the pipline. Besides, it can also be imporved in time efficient.
+
+There are methods to tackle the problems. More accurate thresholds could be found if I implement the pipline through the tricky frames of the challenage video. 
+
 
