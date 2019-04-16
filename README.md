@@ -16,7 +16,7 @@ position
 ## Reflection
 ## 1. Camera Calibration and image undistortion
 
-I coded this part in the jupyter notebook. The images for calibration were shot by the camera in different distence or angels of the same printed chessboard. I counted the corners in the chessboard images. The the corners were detected in cv2.findChessboardCorners, and the coordinates of the corners were stored in a list. With the corresponding point coordinates in the object points which I listed and the corners' coordinates in images, the openCV calibrateCamera function implement the calibration. Then I get the mtx and dist array which were used to undistort images.
+I coded this part in the [jupyter notebook](P2.ipynb). The images for calibration were shot by the camera in different distence or angels of the same printed chessboard. I counted the corners in the chessboard images. The the corners were detected in cv2.findChessboardCorners, and the coordinates of the corners were stored in a list. With the corresponding point coordinates in the object points which I listed and the corners' coordinates in images, the openCV calibrateCamera function implement the calibration. Then I get the mtx and dist array which were used to undistort images.
 
 <img src="output_images/calibration and undistort.png">
 
@@ -28,7 +28,7 @@ Here are some of the results through my code.
 
 <img src="output_images/color channel and thresholds.png">
 
-I wrote the image preprocessing and lane detecting code in two python filse: Preprocessing.py and LaneLines.py. The Preprocessing.py contains a pipline to get warped binary image from the original image. 
+The [Preprocessing.py](Preprocessing.py) contains a pipline to get warped binary image from the original image. 
 
 ## 3. Warp image
 Perspective transformation were needed to calculate the distance or lane curvature because of the perspective phenomenon. The transform need 4 pixels' coordinates in the source and destination images. I chose them manually form the image with straight lane lines. Then I got the images in "birds-eye view".
@@ -37,7 +37,7 @@ Here are one example of the transform.
 <img src="output_images/warped image.png">
 
 ## 4.Find and fit lane lines
-I wrote the lane detecting code in the Lane class which were written in LaneLines.py. I use the sliding windows method to detect the lane line pixels coordinates and fit them into left and right lane polynomial function. 
+I wrote the lane detecting code in the Lane class which were written in [LaneLines.py](LaneLines.py). I use the sliding windows method to detect the lane line pixels coordinates and fit them into left and right lane polynomial function. 
 Because of the lightness variation and some other reason, I couldn't detect the correct lane lines. Since the lane line doesn't change too much from frame to frame. The bad lane lines detecting result should be reject. In my code, if the positions of the near ends of lane lines, or the lane area changed drasticlly, the detecting result would be rejected.
 With the lane line functions, the radius of the lane line curvature could be calcalated. 
 
