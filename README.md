@@ -2,7 +2,7 @@
 ## Project: Finding Lane Lines on the Road 
 
 This project is for Udacity CarND P2: Advanced lane lines. You can run the code locally. 
---------
+
 ## Writeup
 
 The goals / steps of this project are the following:
