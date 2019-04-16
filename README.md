@@ -24,9 +24,9 @@ The picture show the images before and after the undistortion, and the diference
 
 ## 2. Preprocessing
 This step is the core of the project. The main idea is to seprate the lane lines. I have tried to check the difference between every channel of the image in RGB, HLS and HSV color space. I found that the R,S,V channel performed well in seprating the lane lines. I run my color_channel_threshld function to convert the image into binary image. The desired binary images were bright in lane lines and dark in the background. 
-Here are some of the results therough my code.
+Here are some of the results through my code.
 
-![image](A105B2DBEE3D467389DB95D0E057EF10)
+<img src="output_images/color channel and thresholds.png">
 
 I wrote the image preprocessing and lane detecting code in two python filse: Preprocessing.py and LaneLines.py. The Preprocessing.py contains a pipline to get warped binary image from the original image. 
 
@@ -34,7 +34,7 @@ I wrote the image preprocessing and lane detecting code in two python filse: Pre
 Perspective transformation were needed to calculate the distance or lane curvature because of the perspective phenomenon. The transform need 4 pixels' coordinates in the source and destination images. I chose them manually form the image with straight lane lines. Then I got the images in "birds-eye view".
 Here are one example of the transform.
 
-![image](9745941C0A504834A10EFF5C230A6F6F)
+<img src="output_images/warped image.png">
 
 ## 4.Find and fit lane lines
 I wrote the lane detecting code in the Lane class which were written in LaneLines.py. I use the sliding windows method to detect the lane line pixels coordinates and fit them into left and right lane polynomial function. 
@@ -43,7 +43,7 @@ With the lane line functions, the radius of the lane line curvature could be cal
 
 ## 5. Test on iamges and videos
 I run my pipline on the test images firstly. The result looks good. Here is an example.
-![image](08D38BA9A635456EA232658505B2D528)
+<img src="output_images/7.jpg">
 
 The test result on videos were saved in the outputs video folder. It performed reasonably well on the entire project video. There is no catastrophic failures. And the radius of curvature of the lane and vehicle position within the lane were calculated.
 
